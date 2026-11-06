@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Call Us | SlicePilot — Kent Pizzeria (Demo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-banner">🍕 DEMO PROJECT — <span>Kent Pizzeria is a fictional restaurant.</span> No real orders, payments, or deliveries.</div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">🍕 SlicePilot<small>Kent Pizzeria · Hartford CT</small></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="track-order.html">Track Order</a></li>
+      <li><a href="help.html">Help &amp; Support</a></li>
+      <li><a href="call.html">Call Us</a></li>
+    </ul>
+    <a class="btn" href="menu.html">Order Now<span class="cart-badge" id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Call Us — AI Assistant</h1>
+  <p class="lead">Call Kent Pizzeria and our AI assistant takes your pizza order — short answers, one question at a time, and it confirms every item before finishing. It never asks for card details.</p>
+
+  <div class="section-note">
+    <strong>Demo only.</strong> The AI calling agent is not connected yet. This page shows how it will work once the Retell agent is set up. No real phone number is published for this fictional restaurant.
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>🤖 Talk to the AI assistant</h3>
+      <p>Order by phone: tell the assistant what you want, confirm your delivery address, and it places the order. You pay afterwards by secure payment link.</p>
+      <button class="btn" onclick="callRestaurant()">Call Us — AI Assistant</button>
+      <div id="aiCallNote" class="section-note hidden" style="margin-top: 16px;">
+        <strong>AI calling agent — coming soon.</strong><br>
+        The Retell AI agent for Kent Pizzeria has not been created yet. Once it is set up, this button will open the agent so you can call and order by voice. Demo only — no call is placed from this page today.
+      </div>
+    </div>
+    <div class="card">
+      <h3>How a call works</h3>
+      <ol style="margin-left: 18px;">
+        <li>You call and the AI assistant greets you.</li>
+        <li>You say which pizzas you want — it checks the menu and prices.</li>
+        <li>It confirms your order and delivery address.</li>
+        <li>You get a secure payment link by text or email — money goes to the restaurant, never through the assistant.</li>
+        <li>Your pizza is cooked and a courier delivers it. Track it on the <a href="track-order.html">Track Order</a> page.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>Other ways to order</h2>
+  <div class="grid cols-3">
+    <div class="card"><h3>🛒 Website</h3><p>Pick your pizzas on the <a href="menu.html">menu page</a> and check out in the browser.</p></div>
+    <div class="card"><h3>💬 Chatbot</h3><p>Chat with the SlicePilot assistant — it can look up orders, search the menu, and raise a ticket.</p></div>
+    <div class="card"><h3>🆘 Need help?</h3><p>Raise a request on the <a href="help.html">Help &amp; Support</a> page and get a ticket number.</p></div>
+  </div>
+
+  <h2>Try a demo order</h2>
+  <p>Track demo order <strong>3001</strong> (Margherita, out for delivery), <strong>3002</strong> (Pepperoni, preparing) or <strong>3003</strong> (Veggie Supreme, delivered) on the <a href="track-order.html">Track Order</a> page.</p>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>🍕 SlicePilot — Kent Pizzeria</h3>
+    <p>112 Ashley Street, Hartford, CT — fictional address for this demo project.</p>
+    <p><a href="menu.html">Menu</a> · <a href="track-order.html">Track Order</a> · <a href="call.html">Call Us</a> · <a href="help.html">Help &amp; Support</a></p>
+    <p class="fineprint">Demo project — Kent Pizzeria is a fictional restaurant. No real orders, payments, or deliveries. © 2026 SlicePilot.</p>
+  </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

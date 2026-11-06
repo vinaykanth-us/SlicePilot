@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Order | SlicePilot — Kent Pizzeria (Demo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-banner">🍕 DEMO PROJECT — <span>Kent Pizzeria is a fictional restaurant.</span> No real orders, payments, or deliveries.</div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">🍕 SlicePilot<small>Kent Pizzeria · Hartford CT</small></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="track-order.html">Track Order</a></li>
+      <li><a href="help.html">Help &amp; Support</a></li>
+      <li><a href="call.html">Call Us</a></li>
+    </ul>
+    <a class="btn" href="menu.html">Order Now<span class="cart-badge" id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Track Your Order</h1>
+  <p class="lead">Enter your demo order number to see where your pizza is.</p>
+
+  <div class="section-note">
+    <strong>Demo orders:</strong> try <strong>3001</strong> (Margherita — out for delivery), <strong>3002</strong> (Pepperoni — preparing) or <strong>3003</strong> (Veggie Supreme — delivered). Any other number shows "not found".
+  </div>
+
+  <div class="card" style="max-width: 640px;">
+    <form id="trackingForm" class="form">
+      <label for="orderNumber">Order Number *</label>
+      <input id="orderNumber" type="text" inputmode="numeric" required placeholder="e.g. 3001">
+      <p style="margin-top: 16px;"><button class="btn" type="submit">Track Order</button></p>
+    </form>
+
+    <div id="trackingResult" class="hidden" style="margin-top: 18px;"></div>
+
+    <div id="trackingError" class="error-box hidden">
+      <h3>Order not found</h3>
+      <p>We couldn't find that order number. Check the number and try again — demo orders are 3001, 3002 and 3003.</p>
+      <p style="margin-top: 12px;">Having a problem with an order? <a class="btn secondary" href="help.html">Raise a support ticket</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>🍕 SlicePilot — Kent Pizzeria</h3>
+    <p>112 Ashley Street, Hartford, CT — fictional address for this demo project.</p>
+    <p><a href="menu.html">Menu</a> · <a href="track-order.html">Track Order</a> · <a href="call.html">Call Us</a> · <a href="help.html">Help &amp; Support</a></p>
+    <p class="fineprint">Demo project — Kent Pizzeria is a fictional restaurant. No real orders, payments, or deliveries. © 2026 SlicePilot.</p>
+  </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="script.js"></script>
+<script src="track-order.js"></script>
+</body>
+</html>

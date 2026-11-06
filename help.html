@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help &amp; Support | SlicePilot — Kent Pizzeria (Demo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-banner">🍕 DEMO PROJECT — <span>Kent Pizzeria is a fictional restaurant.</span> No real orders, payments, or deliveries.</div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">🍕 SlicePilot<small>Kent Pizzeria · Hartford CT</small></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="track-order.html">Track Order</a></li>
+      <li><a href="help.html">Help &amp; Support</a></li>
+      <li><a href="call.html">Call Us</a></li>
+    </ul>
+    <a class="btn" href="menu.html">Order Now<span class="cart-badge" id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>We're Here To Help You!</h1>
+  <p class="lead">Tell us what went wrong with your order and we'll raise a support ticket for you.</p>
+
+  <div class="section-note">
+    <strong>Demo only.</strong> Tickets are saved in your browser only and are <strong>not</strong> sent to any restaurant — Kent Pizzeria is fictional.
+  </div>
+
+  <div class="card" style="max-width: 640px;">
+    <form id="supportForm" class="form">
+      <label for="supName">Your Name *</label>
+      <input id="supName" type="text" required minlength="2" placeholder="Your name">
+
+      <label for="supPhone">Phone (optional)</label>
+      <input id="supPhone" type="tel" placeholder="Your phone number (optional)">
+      <p class="hint">Optional in this demo — only used if the restaurant needs to reach you.</p>
+
+      <label for="supOrder">Order Number (optional)</label>
+      <input id="supOrder" type="text" placeholder="e.g. 3001">
+
+      <label for="supCategory">Issue Category *</label>
+      <select id="supCategory" required>
+        <option value="">Select a category</option>
+        <option>Late Delivery</option>
+        <option>Wrong Order</option>
+        <option>Missing Items</option>
+        <option>Food Quality</option>
+        <option>Order Cancellation</option>
+        <option>Payment Issue</option>
+        <option>Other</option>
+      </select>
+
+      <label for="supDesc">Describe Your Issue *</label>
+      <textarea id="supDesc" rows="4" required minlength="5" placeholder="Tell us what happened…"></textarea>
+
+      <p style="margin-top: 16px;"><button class="btn" type="submit">Submit Request</button></p>
+    </form>
+
+    <div id="ticketSuccess" class="success-box hidden">
+      <h3>✅ Request received!</h3>
+      <p>Your ticket number is:</p>
+      <p class="ticket" id="ticketNumber">#TKT-3001</p>
+      <p><span id="ticketName"></span> — <span id="ticketCategory"></span></p>
+      <p class="hint">Demo ticket — saved in your browser only, not sent to the restaurant.</p>
+      <p style="margin-top: 12px;">
+        <button class="btn secondary" id="copyTicket" type="button">Copy Ticket Number</button>
+        <button class="btn ghost" id="anotherRequest" type="button">Submit Another Request</button>
+      </p>
+    </div>
+  </div>
+
+  <h2>Prefer talking to us?</h2>
+  <p>Call the AI assistant from the <a href="call.html">Call Us</a> page — it can take your order or raise a ticket for you.</p>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>🍕 SlicePilot — Kent Pizzeria</h3>
+    <p>112 Ashley Street, Hartford, CT — fictional address for this demo project.</p>
+    <p><a href="menu.html">Menu</a> · <a href="track-order.html">Track Order</a> · <a href="call.html">Call Us</a> · <a href="help.html">Help &amp; Support</a></p>
+    <p class="fineprint">Demo project — Kent Pizzeria is a fictional restaurant. No real orders, payments, or deliveries. © 2026 SlicePilot.</p>
+  </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="script.js"></script>
+<script src="help.js"></script>
+</body>
+</html>

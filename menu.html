@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | SlicePilot — Kent Pizzeria (Demo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-banner">🍕 DEMO PROJECT — <span>Kent Pizzeria is a fictional restaurant.</span> No real orders, payments, or deliveries.</div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">🍕 SlicePilot<small>Kent Pizzeria · Hartford CT</small></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="track-order.html">Track Order</a></li>
+      <li><a href="help.html">Help &amp; Support</a></li>
+      <li><a href="call.html">Call Us</a></li>
+    </ul>
+    <a class="btn" href="checkout.html">Checkout<span class="cart-badge" id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Our Menu</h1>
+  <p class="lead">25 pizzas in 5 sizes, plus appetizers, thin crust flatbreads and wings. Pick a size — medium is the default.</p>
+
+  <div class="section-note">
+    <strong>Menu modeled on Olive Pizza (Bristol, CT) via Slice — used as reference for this fictional demo; prices are Olive Pizza's listed prices, not Kent Pizzeria's.</strong> Source: Olive Pizza, 274 Middle St, Bristol, CT 06010, on Slice — read 6 Nov 2026. Kent Pizzeria is fictional; these prices will be replaced with the real menu if this ever goes live with a real restaurant.
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="setCategory('All', this)">All</button>
+    <button class="filter-btn" onclick="setCategory('Pizzas', this)">Pizzas</button>
+    <button class="filter-btn" onclick="setCategory('Appetizers', this)">Appetizers</button>
+    <button class="filter-btn" onclick="setCategory('Flatbreads', this)">Flatbreads</button>
+    <button class="filter-btn" onclick="setCategory('Wings', this)">Wings</button>
+    <input class="search-box" type="search" id="menuSearch" placeholder="Search the menu…">
+  </div>
+  <p id="menuCount" class="hint"></p>
+
+  <div class="menu-grid" id="menuGrid"></div>
+
+  <div class="cart-panel" id="cartPanel"></div>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>🍕 SlicePilot — Kent Pizzeria</h3>
+    <p>112 Ashley Street, Hartford, CT — fictional address for this demo project.</p>
+    <p><a href="menu.html">Menu</a> · <a href="track-order.html">Track Order</a> · <a href="call.html">Call Us</a> · <a href="help.html">Help &amp; Support</a></p>
+    <p class="fineprint">Demo project — Kent Pizzeria is a fictional restaurant. No real orders, payments, or deliveries. © 2026 SlicePilot.</p>
+  </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SlicePilot — Kent Pizzeria | AI Pizza Delivery, Hartford CT (Demo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-banner">🍕 DEMO PROJECT — <span>Kent Pizzeria is a fictional restaurant.</span> No real orders, payments, or deliveries.</div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">🍕 SlicePilot<small>Kent Pizzeria · Hartford CT</small></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="track-order.html">Track Order</a></li>
+      <li><a href="help.html">Help &amp; Support</a></li>
+      <li><a href="call.html">Call Us</a></li>
+    </ul>
+    <a class="btn" href="menu.html">Order Now<span class="cart-badge" id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>Hot pizza, ordered by AI. 🍕</h1>
+    <p>Kent Pizzeria — a demo pizza restaurant in Hartford, CT. Order on the site, or call and let the AI assistant take your order. Pay by secure link, and a courier brings it to your door.</p>
+    <a class="btn" href="menu.html">Order Now</a>
+    <a class="btn secondary" href="call.html">Call Us — AI Assistant</a>
+    <div class="hero-badges">
+      <span>🤖 AI phone ordering</span>
+      <span>💬 Chatbot ordering</span>
+      <span>🔒 Secure payment link</span>
+      <span>🛵 Courier delivery</span>
+    </div>
+    <img class="hero-img" src="assets/hero-pizza.jpg" alt="Fresh pepperoni pizza with a melted cheese pull">
+  </section>
+
+  <div class="section-note">
+    <strong>Demo menu modeled on Olive Pizza (Bristol, CT) via Slice.</strong> This site is a practice build. Kent Pizzeria is fictional, and the menu and prices here are Olive Pizza's listed prices used as reference — not Kent Pizzeria's.
+  </div>
+
+  <h2>Most Loved Pizzas</h2>
+  <div class="grid cols-3">
+    <div class="card">
+      <img class="card-img" src="assets/pizza-cheese.jpg" alt="Cheese Pizza">
+      <h3>Cheese Pizza</h3>
+      <p class="menu-desc">Classic cheese pizza.</p>
+      <span class="menu-price">$19.24 <small>(MED)</small></span>
+    </div>
+    <div class="card">
+      <img class="card-img" src="assets/pizza-house-special.jpg" alt="House Special Pizza">
+      <h3>House Special Pizza</h3>
+      <p class="menu-desc">The house special.</p>
+      <span class="menu-price">$25.84 <small>(MED)</small></span>
+    </div>
+    <div class="card">
+      <img class="card-img" src="assets/pizza-margarita.jpg" alt="Margarita Pizza">
+      <h3>Margarita Pizza</h3>
+      <p class="menu-desc">Margarita pizza.</p>
+      <span class="menu-price">$25.84 <small>(MED)</small></span>
+    </div>
+  </div>
+  <p style="margin-top: 14px;"><a class="btn secondary" href="menu.html">See the full menu — 25 pizzas, appetizers, flatbreads &amp; wings</a></p>
+
+  <h2>How SlicePilot works</h2>
+  <div class="grid cols-2 steps">
+    <div class="card step"><span class="step-num">1</span><div><h3>Order</h3><p>Order on the website, on chat, or by phone — the AI assistant takes your order and confirms every item.</p></div></div>
+    <div class="card step"><span class="step-num">2</span><div><h3>Pay</h3><p>You get a secure payment link by text or email. You never read out card details on a call.</p></div></div>
+    <div class="card step"><span class="step-num">3</span><div><h3>We cook</h3><p>The kitchen gets your order and starts on your pizza right away.</p></div></div>
+    <div class="card step"><span class="step-num">4</span><div><h3>Delivery</h3><p>A courier picks up your pizza and delivers it to your door — track it live on the Track Order page.</p></div></div>
+  </div>
+
+  <h2>Try the demo</h2>
+  <div class="grid cols-3">
+    <div class="card">
+      <h3>📦 Track a demo order</h3>
+      <p>Try order <strong>3001</strong> (out for delivery), <strong>3002</strong> (preparing) or <strong>3003</strong> (delivered).</p>
+      <p><a class="btn" href="track-order.html">Track Order</a></p>
+    </div>
+    <div class="card">
+      <h3>📞 Call the AI agent</h3>
+      <p>The AI calling agent page shows how phone ordering will work once the agent is connected.</p>
+      <p><a class="btn" href="call.html">Call Us</a></p>
+    </div>
+    <div class="card">
+      <h3>🆘 Need help?</h3>
+      <p>Raise a support request and get a ticket number — demo only, handled in your browser.</p>
+      <p><a class="btn" href="help.html">Help &amp; Support</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>🍕 SlicePilot — Kent Pizzeria</h3>
+    <p>112 Ashley Street, Hartford, CT — fictional address for this demo project.</p>
+    <p><a href="menu.html">Menu</a> · <a href="track-order.html">Track Order</a> · <a href="call.html">Call Us</a> · <a href="help.html">Help &amp; Support</a></p>
+    <p class="fineprint">Demo project — Kent Pizzeria is a fictional restaurant. No real orders, payments, or deliveries. © 2026 SlicePilot.</p>
+  </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
