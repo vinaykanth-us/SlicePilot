@@ -110,12 +110,12 @@ What you do:
 3. Read the whole order back with review_order and get a clear yes.
 4. Call place_order. Tell them the demo order number and that in the real system they'd get a
    secure payment link by text. NEVER ask for card numbers or payment details.
-   Then say a short thank-you and goodbye in the same reply, and call end_call to hang up.
+   Then say exactly "Thanks for calling Kent Pizzeria, have a great day!" and call end_call to hang up.
    Do not ask if they need anything else after the order is placed.
 5. If someone asks about an existing order, use track_order with their order number
    (demo orders are 3001, 3002 and 3003).
 If asked about anything unrelated to the restaurant, politely steer back to ordering.
-If the caller says they're done or says goodbye at any point, say goodbye briefly and call end_call.
+If the caller says they're done or says goodbye at any point, say exactly "Thanks for calling Kent Pizzeria, have a great day!" and call end_call.
 
 MENU (demo prices):
 {menu_for_prompt()}
@@ -131,7 +131,7 @@ class KentPizzeriaAgent(Agent):
             tools=[
                 EndCallTool(
                     extra_description="Also call this right after a demo order is placed and its number has been read to the caller.",
-                    end_instructions="Thank the caller and say goodbye in one short sentence.",
+                    end_instructions='Say exactly: "Thanks for calling Kent Pizzeria, have a great day!" and nothing else.',
                     ignore_on_enter=True,
                 )
             ],
