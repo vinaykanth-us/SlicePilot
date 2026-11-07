@@ -28,18 +28,16 @@
   <p class="lead">Call Kent Pizzeria and our AI assistant takes your pizza order — short answers, one question at a time, and it confirms every item before finishing. It never asks for card details.</p>
 
   <div class="section-note">
-    <strong>Demo only.</strong> The AI calling agent is not connected yet. This page shows how it will work once the Retell agent is set up. No real phone number is published for this fictional restaurant.
+    <strong>Demo only.</strong> Kent Pizzeria is fictional. The AI assistant takes practice orders only: nothing is cooked, charged, or delivered, and it never asks for card details. Calls use free demo minutes, so the line may be unavailable once they run out.
   </div>
 
   <div class="grid cols-2">
     <div class="card">
       <h3>🤖 Talk to the AI assistant</h3>
-      <p>Order by phone: tell the assistant what you want, confirm your delivery address, and it places the order. You pay afterwards by secure payment link.</p>
-      <button class="btn" onclick="callRestaurant()">Call Us — AI Assistant</button>
-      <div id="aiCallNote" class="section-note hidden" style="margin-top: 16px;">
-        <strong>AI calling agent — coming soon.</strong><br>
-        The Retell AI agent for Kent Pizzeria has not been created yet. Once it is set up, this button will open the agent so you can call and order by voice. Demo only — no call is placed from this page today.
-      </div>
+      <p><strong>In your browser:</strong> click the voice button in the bottom-right corner of this page, allow your microphone, and start ordering.</p>
+      <p><strong>By phone:</strong> call our demo line (US).</p>
+      <a class="btn" href="tel:+14753697886">📞 Call +1 (475) 369-7886</a>
+      <p class="fineprint" style="margin-top: 12px;">Demo line for a fictional restaurant. Standard call rates from your carrier may apply.</p>
     </div>
     <div class="card">
       <h3>How a call works</h3>
@@ -75,5 +73,7 @@
 
 <script src="menu.js"></script>
 <script src="script.js"></script>
+<!-- LiveKit Agent Embed Widget: voice assistant launcher (agent kent-pizzeria) -->
+<script src="https://cloud.livekit.io/embed-popup.js" data-lk-agent="CA_emshR9pkrvSL"></script>
 </body>
 </html>
