@@ -1,16 +1,13 @@
 /* ==========================================
    SlicePilot — Kent Pizzeria (Demo)
-   MENU DATA — modeled on Olive Pizza (Bristol, CT)
-   via Slice (slicelife.com), read 6 Nov 2026.
-   Used as reference for this fictional demo only.
-   These are Olive Pizza's listed prices, NOT
-   Kent Pizzeria's prices. $0.00 entries on the
+   MENU DATA — sample menu for this fictional demo only.
+   These are demo prices, NOT a real restaurant's
+   prices. $0.00 entries on the
    source page were skipped as unpriced variants.
    Kent Pizzeria is a fictional restaurant.
    ========================================== */
 
-const DEMO_MENU_NOTE = "Menu modeled on Olive Pizza (Bristol, CT) via Slice — used as reference for this fictional demo; prices are Olive Pizza's listed prices, not Kent Pizzeria's.";
-const MENU_SOURCE = "Olive Pizza, 274 Middle St, Bristol, CT 06010 — slicelife.com (read 6 Nov 2026)";
+const DEMO_MENU_NOTE = "Sample menu for this fictional demo; prices are demo prices, not a real restaurant's.";
 
 const SIZES = ["XS", "SM", "MED", "LG", "XL"];
 const STD = { XS: 15.39, SM: 22.54, MED: 25.84, LG: 30.24, XL: 35.74 };
