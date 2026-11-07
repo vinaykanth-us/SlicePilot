@@ -1,0 +1,522 @@
+[
+ {
+  "id": 1,
+  "name": "BBQ Chicken Pizza",
+  "category": "Pizzas",
+  "desc": "BBQ chicken pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 2,
+  "name": "Buffalo Chicken Chunky Bleu Cheese Pizza",
+  "category": "Pizzas",
+  "desc": "Buffalo chicken with chunky bleu cheese.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 3,
+  "name": "Buffalo Pizza",
+  "category": "Pizzas",
+  "desc": "Buffalo sauce pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 4,
+  "name": "Cheese Pizza",
+  "category": "Pizzas",
+  "desc": "Classic cheese pizza.",
+  "sizes": {
+   "XS": 9.89,
+   "SM": 17.04,
+   "MED": 19.24,
+   "LG": 21.44,
+   "XL": 24.74
+  }
+ },
+ {
+  "id": 5,
+  "name": "Chicken Bacon Ranch Pizza",
+  "category": "Pizzas",
+  "desc": "Chicken, bacon and ranch.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 6,
+  "name": "Chicken Primo Pizza",
+  "category": "Pizzas",
+  "desc": "Chicken primo pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 7,
+  "name": "Chicken Sun-Dried Tomato Pizza",
+  "category": "Pizzas",
+  "desc": "Chicken with sun-dried tomato.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 8,
+  "name": "Clam Casino Pizza",
+  "category": "Pizzas",
+  "desc": "Clam casino pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 9,
+  "name": "Clam Pizza",
+  "category": "Pizzas",
+  "desc": "Clam pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 10,
+  "name": "Fiorentina Pizza",
+  "category": "Pizzas",
+  "desc": "Fiorentina pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 11,
+  "name": "Four Cheese Pizza",
+  "category": "Pizzas",
+  "desc": "Four cheese pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 21.44,
+   "MED": 24.74,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 12,
+  "name": "Hawaiian Pizza",
+  "category": "Pizzas",
+  "desc": "Ham and pineapple.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 13,
+  "name": "House Special Pizza",
+  "category": "Pizzas",
+  "desc": "The house special.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 14,
+  "name": "Italiana Pizza",
+  "category": "Pizzas",
+  "desc": "Italiana pizza. No XS size.",
+  "sizes": {
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 15,
+  "name": "Margarita Pizza",
+  "category": "Pizzas",
+  "desc": "Margarita pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24
+  }
+ },
+ {
+  "id": 16,
+  "name": "Meat Lovers Pizza",
+  "category": "Pizzas",
+  "desc": "Loaded with meats.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 17,
+  "name": "Eggplant Pizza",
+  "category": "Pizzas",
+  "desc": "NEW! Eggplant pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 24.74,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 18,
+  "name": "Honeyroni Pizza",
+  "category": "Pizzas",
+  "desc": "NEW! Honeyroni pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 24.74,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 19,
+  "name": "Lasagna Pizza",
+  "category": "Pizzas",
+  "desc": "NEW! Lasagna pizza. Temporarily unavailable in this demo.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  },
+  "available": false
+ },
+ {
+  "id": 20,
+  "name": "Pesto Tomato Pizza",
+  "category": "Pizzas",
+  "desc": "Pesto and tomato.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 21,
+  "name": "Premium Veggie Pizza",
+  "category": "Pizzas",
+  "desc": "Premium veggie pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 22,
+  "name": "Sarantino Pizza",
+  "category": "Pizzas",
+  "desc": "Sarantino pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 36.29
+  }
+ },
+ {
+  "id": 23,
+  "name": "Shrimp Pesto Pizza",
+  "category": "Pizzas",
+  "desc": "Shrimp with pesto.",
+  "sizes": {
+   "XS": 16.49,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 24,
+  "name": "Steak Pizza",
+  "category": "Pizzas",
+  "desc": "Steak pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.84,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 25,
+  "name": "Veggie Pizza",
+  "category": "Pizzas",
+  "desc": "Veggie pizza.",
+  "sizes": {
+   "XS": 15.39,
+   "SM": 22.54,
+   "MED": 25.74,
+   "LG": 30.24,
+   "XL": 35.74
+  }
+ },
+ {
+  "id": 26,
+  "name": "Homemade Mac N Cheese",
+  "category": "Appetizers",
+  "desc": "NEW! Homemade mac n cheese.",
+  "price": 10.99
+ },
+ {
+  "id": 27,
+  "name": "Fried Mozzarella (6 PC)",
+  "category": "Appetizers",
+  "desc": "6 pieces of fried mozzarella.",
+  "price": 8.79
+ },
+ {
+  "id": 28,
+  "name": "Chicken Fingers (7 PC)",
+  "category": "Appetizers",
+  "desc": "7 pieces of chicken fingers.",
+  "price": 16.49
+ },
+ {
+  "id": 29,
+  "name": "Waffle Fries",
+  "category": "Appetizers",
+  "desc": "NEW! Waffle fries.",
+  "price": 8.24
+ },
+ {
+  "id": 30,
+  "name": "French Fries",
+  "category": "Appetizers",
+  "desc": "French fries.",
+  "price": 7.69
+ },
+ {
+  "id": 31,
+  "name": "Fried Dough with Sugar",
+  "category": "Appetizers",
+  "desc": "Fried dough with sugar.",
+  "price": 8.24
+ },
+ {
+  "id": 32,
+  "name": "Curly Fries",
+  "category": "Appetizers",
+  "desc": "Curly fries.",
+  "price": 8.24
+ },
+ {
+  "id": 33,
+  "name": "Tri Sampler",
+  "category": "Appetizers",
+  "desc": "3 mozzarella sticks, 3 jalapeno poppers, 3 chicken fingers and marinara sauce.",
+  "price": 13.74
+ },
+ {
+  "id": 34,
+  "name": "Onion Rings",
+  "category": "Appetizers",
+  "desc": "Onion rings.",
+  "price": 8.24
+ },
+ {
+  "id": 35,
+  "name": "Garlic Bread",
+  "category": "Appetizers",
+  "desc": "Garlic bread.",
+  "price": 7.14
+ },
+ {
+  "id": 36,
+  "name": "Zucchini Fries",
+  "category": "Appetizers",
+  "desc": "Zucchini fries.",
+  "price": 8.24
+ },
+ {
+  "id": 37,
+  "name": "Garlic Bread with Cheese",
+  "category": "Appetizers",
+  "desc": "Garlic bread with cheese.",
+  "price": 7.69
+ },
+ {
+  "id": 38,
+  "name": "Jalapeno Poppers",
+  "category": "Appetizers",
+  "desc": "Jalapeno poppers.",
+  "price": 8.79
+ },
+ {
+  "id": 39,
+  "name": "Grilled Chicken with Fries",
+  "category": "Appetizers",
+  "desc": "Grilled chicken served with fries.",
+  "price": 14.84
+ },
+ {
+  "id": 40,
+  "name": "Fried Mushrooms",
+  "category": "Appetizers",
+  "desc": "Fried mushrooms.",
+  "price": 8.79
+ },
+ {
+  "id": 41,
+  "name": "Fried Jumbo Shrimp (7 PC)",
+  "category": "Appetizers",
+  "desc": "7 pieces of fried jumbo shrimp.",
+  "price": 23.64
+ },
+ {
+  "id": 42,
+  "name": "Potato Skins",
+  "category": "Appetizers",
+  "desc": "Potato skins.",
+  "price": 9.89
+ },
+ {
+  "id": 43,
+  "name": "Chicken Bacon Ranch Flatbread",
+  "category": "Flatbreads",
+  "desc": "Grilled chicken, bacon, ranch sauce.",
+  "price": 23.09
+ },
+ {
+  "id": 44,
+  "name": "Buffalo Chicken Flatbread",
+  "category": "Flatbreads",
+  "desc": "Buffalo crispy chicken, bacon, hot sauce, ranch.",
+  "price": 23.09
+ },
+ {
+  "id": 45,
+  "name": "Classic Flatbread",
+  "category": "Flatbreads",
+  "desc": "Shaved beef steak, onion, green peppers, mushrooms.",
+  "price": 23.09
+ },
+ {
+  "id": 46,
+  "name": "Chicken Broccoli Flatbread",
+  "category": "Flatbreads",
+  "desc": "Grilled chicken, broccoli, fresh sliced tomato.",
+  "price": 23.09
+ },
+ {
+  "id": 47,
+  "name": "Pesto Chicken Flatbread",
+  "category": "Flatbreads",
+  "desc": "Grilled chicken, pesto sauce, roasted peppers.",
+  "price": 23.09
+ },
+ {
+  "id": 48,
+  "name": "Grilled Chicken Sundried Tomato Flatbread",
+  "category": "Flatbreads",
+  "desc": "White, grilled chicken, sun-dried tomatoes, roasted peppers, fresh garlic, olive oil.",
+  "price": 23.09
+ },
+ {
+  "id": 49,
+  "name": "6 PC Wings",
+  "category": "Wings",
+  "desc": "6 piece bone-in wings.",
+  "price": 12.09
+ },
+ {
+  "id": 50,
+  "name": "6 PC Boneless Wings",
+  "category": "Wings",
+  "desc": "NEW! Bite-sized boneless wings.",
+  "price": 12.09
+ },
+ {
+  "id": 51,
+  "name": "12 PC Wings",
+  "category": "Wings",
+  "desc": "12 piece bone-in wings.",
+  "price": 23.09
+ },
+ {
+  "id": 52,
+  "name": "12 PC Boneless Wings",
+  "category": "Wings",
+  "desc": "NEW! Bite-sized boneless wings.",
+  "price": 23.09
+ },
+ {
+  "id": 53,
+  "name": "24 PC Wings",
+  "category": "Wings",
+  "desc": "24 piece bone-in wings.",
+  "price": 39.59
+ }
+]
