@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SlicePilot — Kent Pizzeria | AI Pizza Delivery, Hartford CT (Demo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,10 +28,16 @@
 
 <main class="container">
   <section class="hero">
-    <h1>Hot pizza, ordered by AI. 🍕</h1>
+    <span class="eyebrow" style="background: rgba(245,179,1,0.18); color: #f5b301; border-color: rgba(245,179,1,0.5);">🍕 Hartford, CT • AI Pizza</span>
+    <h1>Hot pizza,<br>ordered by <span class="gold-word">AI.</span> 🍕</h1>
     <p>Kent Pizzeria — a demo pizza restaurant in Hartford, CT. Order on the site, or call and let the AI assistant take your order. Pay by secure link, and a courier brings it to your door.</p>
-    <a class="btn" href="menu.html">Order Now</a>
+    <a class="btn" href="menu.html">Order Now →</a>
     <a class="btn secondary" href="call.html">Call Us — AI Assistant</a>
+    <div class="hero-stats">
+      <div><strong>53</strong><span>Menu items</span></div>
+      <div><strong>AI</strong><span>Ordering</span></div>
+      <div><strong>Demo</strong><span>No real orders</span></div>
+    </div>
     <div class="hero-badges">
       <span>🤖 AI phone ordering</span>
       <span>💬 Chatbot ordering</span>
@@ -64,6 +73,42 @@
     </div>
   </div>
   <p style="margin-top: 14px;"><a class="btn secondary" href="menu.html">See the full menu — 25 pizzas, appetizers, flatbreads &amp; wings</a></p>
+
+  <section class="finder" id="ai-finder">
+    <span class="eyebrow">🤖 AI Pizza Finder — Demo</span>
+    <h2>Not sure what to order? Let the AI pick.</h2>
+    <p>Answer 3 quick questions. The AI picks from the real 53-item menu — no made-up pizzas, no data sent anywhere.</p>
+    <div class="finder-controls">
+      <label>Craving
+        <select id="finderCraving">
+          <option value="any">Anything</option>
+          <option value="meaty">Meaty</option>
+          <option value="veggie">Veggie</option>
+          <option value="cheesy">Extra cheesy</option>
+          <option value="spicy">Spicy</option>
+        </select>
+      </label>
+      <label>Spice
+        <select id="finderSpice">
+          <option value="any">Any spice</option>
+          <option value="mild">Mild</option>
+          <option value="medium">Medium</option>
+          <option value="hot">Hot</option>
+        </select>
+      </label>
+      <label>Size
+        <select id="finderSize">
+          <option value="MED">Medium</option>
+          <option value="SM">Small</option>
+          <option value="LG">Large</option>
+          <option value="XL">Extra Large</option>
+        </select>
+      </label>
+      <button class="btn" id="finderBtn" type="button">Find my pizza ✨</button>
+    </div>
+    <div id="finderResults" class="grid cols-3 finder-results" style="margin-top: 18px;"></div>
+    <p class="hint">Demo only — the finder runs in your browser from the menu on this site.</p>
+  </section>
 
   <h2>How SlicePilot works</h2>
   <div class="grid cols-2 steps">
@@ -102,7 +147,23 @@
   </div>
 </footer>
 
+<div class="ai-chat" id="aiChat">
+  <button class="ai-chat-btn" id="aiChatBtn" type="button" aria-label="Chat with the AI assistant">🤖 <span>Ask AI</span></button>
+  <div class="ai-chat-panel hidden" id="aiChatPanel">
+    <div class="ai-chat-head"><strong>🍕 SlicePilot AI</strong><span>Demo — browser only</span><button id="aiChatClose" type="button" aria-label="Close chat">✕</button></div>
+    <div class="ai-chat-body" id="aiChatBody"></div>
+    <div class="ai-chat-chips">
+      <button type="button" data-q="Find me a spicy pizza">🌶️ Spicy pizza</button>
+      <button type="button" data-q="Track order 3001">📦 Track 3001</button>
+      <button type="button" data-q="What wings do you have?">🍗 Wings</button>
+      <button type="button" data-q="Help">🆘 Help</button>
+    </div>
+    <form class="ai-chat-form" id="aiChatForm"><input id="aiChatInput" type="text" placeholder="Ask about the menu, orders, help…" autocomplete="off"><button class="btn" type="submit">Send</button></form>
+  </div>
+</div>
+
 <script src="menu.js"></script>
 <script src="script.js"></script>
+<script src="ai-assistant.js"></script>
 </body>
 </html>
