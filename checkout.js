@@ -23,6 +23,17 @@ function toggleCardFields() {
     }
 }
 
+function toggleBillingFields() {
+    const billingFields = document.getElementById("billingFields");
+    const billingSame = document.getElementById("billingSame");
+    if (!billingFields || !billingSame) return;
+    if (billingSame.checked) {
+        billingFields.classList.add("hidden");
+    } else {
+        billingFields.classList.remove("hidden");
+    }
+}
+
 function loadCheckout() {
     const summary = document.getElementById("checkoutSummary");
     const empty = document.getElementById("checkoutEmpty");
@@ -50,6 +61,7 @@ function loadCheckout() {
     summary.innerHTML = html;
     if (paymentTotal) paymentTotal.textContent = "$" + cartTotal().toFixed(2);
     toggleCardFields();
+    toggleBillingFields();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -59,6 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
         radio.addEventListener("change", toggleCardFields);
     });
 
+    const billingSame = document.getElementById("billingSame");
+    if (billingSame) billingSame.addEventListener("change", toggleBillingFields);
+
     const form = document.getElementById("checkoutForm");
     if (!form) return;
 
@@ -66,8 +81,39 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const name = document.getElementById("custName").value.trim();
         const address = document.getElementById("custAddress").value.trim();
+        const apt = document.getElementById("custApt").value.trim();
+        const city = document.getElementById("custCity").value.trim();
+        const zip = document.getElementById("custZip").value.trim();
         const payMethod = selectedDemoValue("payMethod", "Secure payment link");
         const deliveryProvider = selectedDemoValue("deliveryProvider", "DoorDash");
+
+        // City and ZIP code: demo only.
+        if (!city) {
+            alert("Please enter your city.");
+            return;
+        }
+        if (!/^\d{5}(-\d{4})?$/.test(zip)) {
+            alert("Please enter a 5-digit ZIP code, e.g. 06105.");
+            return;
+        }
+
+        // Billing address (demo only): same as delivery, unless unchecked.
+        let billAddress = address;
+        let billApt = apt;
+        let billCity = city;
+        let billZip = zip;
+        const billingSameEl = document.getElementById("billingSame");
+        if (billingSameEl && !billingSameEl.checked) {
+            billAddress = document.getElementById("billAddress").value.trim();
+            billApt = document.getElementById("billApt").value.trim();
+            billCity = document.getElementById("billCity").value.trim();
+            billZip = document.getElementById("billZip").value.trim();
+            if (!billAddress || !billCity || !/^\d{5}(-\d{4})?$/.test(billZip)) {
+                alert("Please enter a billing street address, city, and 5-digit ZIP code.");
+                return;
+            }
+        }
+        const billingText = billAddress + (billApt ? ", " + billApt : "") + ", " + billCity + " " + billZip;
 
         // Demo-only card check: format only, never saved or sent.
         if (payMethod === "Card") {
@@ -91,6 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
             order_id: orderNumber,
             customer: name,
             address: address,
+            apt_demo: apt,
+            city_demo: city,
+            zip_code_demo: zip,
+            billing_address_demo: billingText,
             total: cartTotal(),
             payment_method_demo: payMethod,
             delivery_provider_demo: deliveryProvider,
@@ -115,6 +165,16 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("confirmName").textContent = name;
         document.getElementById("confirmPayment").textContent = payMethod + " (demo — no payment taken)";
         document.getElementById("confirmDelivery").textContent = deliveryProvider + " (demo — no courier booked)";
+        document.getElementById("confirmCity").textContent = city;
+        document.getElementById("confirmZip").textContent = zip;
+        document.getElementById("confirmBilling").textContent = billingText + " (demo)";
+        const aptLine = document.getElementById("confirmAptLine");
+        if (apt) {
+            document.getElementById("confirmApt").textContent = apt;
+            aptLine.classList.remove("hidden");
+        } else {
+            aptLine.classList.add("hidden");
+        }
         confirmBox.classList.remove("hidden");
     });
 });
