@@ -2,12 +2,25 @@
    SlicePilot — Kent Pizzeria (Demo)
    CHECKOUT — demo only. No payment is collected.
    No real DoorDash / Uber delivery is booked.
+   Card fields are demo only: use the test card
+   4242 4242 4242 4242. Card details are never
+   saved, stored, or sent anywhere.
    Orders are saved in the browser only.
    ========================================== */
 
 function selectedDemoValue(name, fallback) {
     const picked = document.querySelector('input[name="' + name + '"]:checked');
     return picked ? picked.value : fallback;
+}
+
+function toggleCardFields() {
+    const cardFields = document.getElementById("cardFields");
+    if (!cardFields) return;
+    if (selectedDemoValue("payMethod", "Secure payment link") === "Card") {
+        cardFields.classList.remove("hidden");
+    } else {
+        cardFields.classList.add("hidden");
+    }
 }
 
 function loadCheckout() {
@@ -36,10 +49,15 @@ function loadCheckout() {
     html += '<div class="cart-total"><span>Total (demo)</span><span>$' + cartTotal().toFixed(2) + '</span></div>';
     summary.innerHTML = html;
     if (paymentTotal) paymentTotal.textContent = "$" + cartTotal().toFixed(2);
+    toggleCardFields();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     loadCheckout();
+
+    document.querySelectorAll('input[name="payMethod"]').forEach(function (radio) {
+        radio.addEventListener("change", toggleCardFields);
+    });
 
     const form = document.getElementById("checkoutForm");
     if (!form) return;
@@ -51,10 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const payMethod = selectedDemoValue("payMethod", "Secure payment link");
         const deliveryProvider = selectedDemoValue("deliveryProvider", "DoorDash");
 
+        // Demo-only card check: format only, never saved or sent.
+        if (payMethod === "Card") {
+            const cardName = document.getElementById("cardName").value.trim();
+            const cardDigits = document.getElementById("cardNumber").value.replace(/\D/g, "");
+            const expiry = document.getElementById("cardExpiry").value.trim();
+            const cvv = document.getElementById("cardCvv").value.replace(/\D/g, "");
+            const expiryOk = /^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry);
+            if (!cardName || cardDigits.length !== 16 || !expiryOk || cvv.length < 3 || cvv.length > 4) {
+                alert("Demo card only: please use the test card 4242 4242 4242 4242, expiry 12/28, CVV 123. Never enter a real card.");
+                return;
+            }
+        }
+
         // Demo order number: next number after the demo orders 3001-3003
         const placed = JSON.parse(localStorage.getItem("slicepilot_demo_orders") || "[]");
         const orderNumber = 3004 + placed.length;
 
+        // Never save card details: only the payment method name is saved.
         placed.push({
             order_id: orderNumber,
             customer: name,
@@ -66,9 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         localStorage.setItem("slicepilot_demo_orders", JSON.stringify(placed));
 
-        // Clear the cart
+        // Clear the cart and clear the demo card fields
         localStorage.removeItem(CART_KEY);
         updateCartBadge();
+        ["cardName", "cardNumber", "cardExpiry", "cardCvv"].forEach(function (id) {
+            const el = document.getElementById(id);
+            if (el) el.value = "";
+        });
 
         document.getElementById("checkoutSummary").classList.add("hidden");
         const demoOptions = document.getElementById("demoOptionsGrid");
