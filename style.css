@@ -525,3 +525,120 @@ html { scroll-behavior: smooth; }
 .choice:has(input:checked) { border-color: var(--red); background: #fdf1ec; box-shadow: 0 4px 14px rgba(180, 35, 42, 0.15); }
 .choice:has(input:focus-visible) { outline: 3px solid rgba(180, 35, 42, 0.2); outline-offset: 2px; }
 .demo-total span:last-child { color: var(--red); font-size: 17px; }
+
+/* ==========================================
+   TOP-NOTCH PREMIUM UPGRADE — 8 Nov 2026
+   American pizza-brand look + AI features.
+   CSS only, no layout or JS logic changed.
+   ========================================== */
+
+/* Richer American-brand palette */
+:root {
+    --red: #c8102e;
+    --red-dark: #8f0b20;
+    --tomato: #f04e23;
+    --gold: #f5b301;
+    --gold-soft: #fdeec2;
+    --cream: #fffaf3;
+    --paper: #ffffff;
+    --ink: #1c110c;
+    --muted: #6f5d4d;
+    --line: #f0dfc9;
+    --green: #1e7d32;
+    --radius: 18px;
+    --shadow-sm: 0 2px 10px rgba(28, 17, 12, 0.07);
+    --shadow-md: 0 12px 30px rgba(28, 17, 12, 0.14);
+    --shadow-lg: 0 24px 55px rgba(143, 11, 32, 0.28);
+}
+
+body { font-family: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif; background: var(--cream); }
+h1, h2, h3, .logo { font-family: "Archivo", "Inter", "Segoe UI", system-ui, sans-serif; letter-spacing: -0.5px; }
+h1 { font-size: clamp(34px, 5vw, 52px); font-weight: 900; line-height: 1.05; }
+h2 { font-size: clamp(24px, 3vw, 30px); font-weight: 800; border-bottom: none; padding-bottom: 0; }
+h2::after { content: ""; display: block; width: 56px; height: 4px; background: var(--gold); border-radius: 999px; margin-top: 8px; }
+h3 { font-weight: 800; }
+
+/* Eyebrow label used across the site */
+.eyebrow { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--red); background: #fdeceb; border: 1px solid #f6c9c9; border-radius: 999px; padding: 5px 12px; margin-bottom: 10px; }
+
+/* Header: cleaner, stronger */
+header { box-shadow: 0 4px 24px rgba(28, 17, 12, 0.08); backdrop-filter: blur(6px); }
+.logo { font-size: 26px; }
+.logo small { letter-spacing: 3px; }
+.nav-links a { font-size: 15px; padding: 6px 2px; }
+.nav-links a:hover { color: var(--red); text-decoration: none; }
+
+/* Buttons: bigger, bolder, American-app feel */
+.btn { padding: 13px 26px; font-size: 16px; border-radius: 999px; box-shadow: 0 6px 18px rgba(200, 16, 46, 0.35); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(200, 16, 46, 0.42); }
+.btn.secondary { box-shadow: var(--shadow-sm); }
+.btn:active { transform: translateY(0) scale(0.98); }
+
+/* Hero: premium split look, gold glow */
+.hero { background: radial-gradient(900px 320px at 85% -10%, rgba(245, 179, 1, 0.55), transparent 60%), linear-gradient(135deg, #5f0f13 0%, #8f0b20 38%, var(--red) 68%, var(--tomato) 100%); padding: 56px 42px 44px; border-radius: 24px; box-shadow: var(--shadow-lg); overflow: hidden; animation: heroIn 0.6s ease both; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.hero h1 { font-size: clamp(40px, 6vw, 62px); text-shadow: 0 3px 18px rgba(0, 0, 0, 0.25); }
+.hero h1 .gold-word { color: var(--gold); }
+.hero p { font-size: 18px; color: #ffe9d9; }
+.hero .btn { margin-top: 20px; }
+.hero-stats { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 24px; }
+.hero-stats div { background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 14px; padding: 10px 16px; }
+.hero-stats strong { display: block; font-size: 20px; color: #fff; }
+.hero-stats span { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #ffe9d9; }
+.hero-img { border-radius: 20px; margin-top: 26px; box-shadow: 0 20px 44px rgba(0, 0, 0, 0.4); }
+
+/* Cards: premium, soft, image-forward */
+.card, .menu-card { border-radius: 20px; box-shadow: var(--shadow-sm); overflow: hidden; }
+.card:hover, .menu-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.card-img, .menu-img { border-radius: 14px; }
+.menu-price { font-size: 20px; }
+.menu-card h3 { font-size: 18px; }
+
+/* Section note: softer, premium */
+.section-note { border-radius: 16px; }
+
+/* ---------- AI Pizza Finder ---------- */
+.finder { background: linear-gradient(135deg, #1c110c, #3a1a12 60%, #8f0b20); color: #fff; border-radius: 24px; padding: 32px 30px; margin: 30px 0; box-shadow: var(--shadow-lg); }
+.finder h2 { color: #fff; }
+.finder h2::after { background: var(--gold); }
+.finder p { color: #ffe9d9; }
+.finder .eyebrow { background: rgba(245, 179, 1, 0.18); color: var(--gold); border-color: rgba(245, 179, 1, 0.5); }
+.finder-controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; margin-top: 18px; }
+.finder-controls label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #ffe9d9; }
+.finder-controls select { padding: 12px 14px; border-radius: 12px; border: 2px solid rgba(255, 255, 255, 0.35); background: #fff; color: var(--ink); font-size: 15px; font-weight: 600; min-width: 160px; }
+.finder-results .card { background: #fff; color: var(--ink); }
+.finder-results .menu-price { color: var(--red); }
+.finder .hint { color: #ffd9a0; }
+
+/* ---------- AI chat widget ---------- */
+.ai-chat { position: fixed; right: 18px; bottom: 18px; z-index: 120; }
+.ai-chat-btn { display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--red), var(--tomato)); color: #fff; border: none; border-radius: 999px; padding: 13px 20px; font-size: 15px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 26px rgba(200, 16, 46, 0.45); }
+.ai-chat-btn:hover { transform: translateY(-2px); }
+.ai-chat-panel { position: absolute; right: 0; bottom: 64px; width: 360px; max-width: calc(100vw - 36px); background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 24px 60px rgba(28, 17, 12, 0.3); overflow: hidden; display: flex; flex-direction: column; }
+.ai-chat-head { background: linear-gradient(135deg, var(--red-dark), var(--red)); color: #fff; padding: 14px 16px; display: flex; align-items: center; gap: 8px; }
+.ai-chat-head strong { font-size: 16px; }
+.ai-chat-head span { font-size: 11px; font-weight: 700; background: rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 3px 8px; }
+.ai-chat-head button { margin-left: auto; background: transparent; border: none; color: #fff; font-size: 16px; cursor: pointer; }
+.ai-chat-body { padding: 14px; height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: var(--cream); }
+.ai-msg { max-width: 88%; padding: 10px 13px; border-radius: 14px; font-size: 14px; line-height: 1.5; white-space: pre-line; }
+.ai-msg.bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 4px; }
+.ai-msg.user { background: var(--red); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+.ai-chat-chips { display: flex; gap: 8px; flex-wrap: wrap; padding: 10px 12px 0; }
+.ai-chat-chips button { border: 2px solid var(--line); background: #fff; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 700; cursor: pointer; }
+.ai-chat-chips button:hover { border-color: var(--gold); color: var(--red); }
+.ai-chat-form { display: flex; gap: 8px; padding: 12px; }
+.ai-chat-form input { flex: 1; padding: 11px 13px; border: 2px solid var(--line); border-radius: 999px; font-size: 14px; font-family: inherit; }
+.ai-chat-form input:focus { outline: none; border-color: var(--red); }
+.ai-chat-form .btn { padding: 10px 18px; font-size: 14px; }
+
+/* Footer: premium dark */
+footer { background: linear-gradient(180deg, #241610, #140c07); }
+footer h3 { color: var(--gold); }
+
+@media (max-width: 720px) {
+    .hero { padding: 36px 22px; }
+    .finder { padding: 24px 20px; }
+    .finder-controls select { min-width: 0; width: 100%; }
+    .finder-controls label { width: 100%; }
+    .ai-chat-panel { width: calc(100vw - 36px); }
+}
