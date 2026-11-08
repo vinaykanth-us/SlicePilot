@@ -80,6 +80,7 @@
         <p>Thank you, <span id="confirmName"></span> — this is a demo order, so nothing will actually be cooked or delivered.</p>
         <p>Payment (demo): <strong id="confirmPayment"></strong></p>
         <p>Delivery (demo): <strong id="confirmDelivery"></strong></p>
+        <p>Billing address (demo): <strong id="confirmBilling"></strong></p>
         <p>City (demo): <strong id="confirmCity"></strong></p>
         <p>ZIP Code (demo): <strong id="confirmZip"></strong></p>
         <p id="confirmAptLine" class="hidden">Apt / Suite: <strong id="confirmApt"></strong></p>
@@ -130,6 +131,27 @@
         <strong>🏪 Pay at pickup</strong>
         <span>Demo only — pay at the counter when you would pick up. No real payment is taken.</span>
       </label>
+
+      <h4 style="margin-top: 16px;">Billing Address <span style="display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-left:6px;color:var(--muted);vertical-align:middle;">Demo only</span></h4>
+      <p class="hint">For billing address purpose — used with the card payment above. Demo only, no real charge.</p>
+      <label class="choice">
+        <input type="checkbox" id="billingSame" checked>
+        <strong>Same as delivery address</strong>
+        <span>Use the delivery street, apt, city and ZIP above as the billing address.</span>
+      </label>
+      <div id="billingFields" class="hidden">
+        <div class="form">
+          <label for="billAddress">Billing Street Address *</label>
+          <textarea id="billAddress" rows="2" placeholder="Street address"></textarea>
+          <label for="billApt">Apt / Suite (optional)</label>
+          <input id="billApt" type="text" autocomplete="off" maxlength="20" placeholder="Apt 2B">
+          <label for="billCity">City *</label>
+          <input id="billCity" type="text" maxlength="50" placeholder="Hartford">
+          <label for="billZip">ZIP Code *</label>
+          <input id="billZip" type="text" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="e.g. 06105">
+        </div>
+      </div>
+
       <div class="demo-total"><span>Total to pay (demo)</span><span id="paymentTotal">$0.00</span></div>
     </div>
 
