@@ -509,3 +509,19 @@ header { box-shadow: 0 2px 16px rgba(36, 26, 18, 0.08); }
 /* Footer: richer, gold headings */
 footer { background: linear-gradient(180deg, #2b2118, #1d150e); }
 footer h3 { color: var(--gold-soft); }
+
+/* ==========================================
+   LITTLE PREMIUM LIFT — 8 Nov 2026
+   Small polish only, no layout changes.
+   ========================================== */
+html { scroll-behavior: smooth; }
+::selection { background: var(--gold-soft); color: var(--ink); }
+.container > h1 { border-bottom: 3px solid var(--gold-soft); padding-bottom: 10px; }
+.btn:active { transform: translateY(0) scale(0.98); box-shadow: 0 2px 8px rgba(180, 35, 42, 0.3); }
+.card-img, .menu-img { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover .card-img, .menu-card:hover .menu-img { transform: scale(1.02); box-shadow: 0 8px 20px rgba(36, 26, 18, 0.2); }
+/* Payment / delivery choices: clear selected state */
+.choice { transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; }
+.choice:has(input:checked) { border-color: var(--red); background: #fdf1ec; box-shadow: 0 4px 14px rgba(180, 35, 42, 0.15); }
+.choice:has(input:focus-visible) { outline: 3px solid rgba(180, 35, 42, 0.2); outline-offset: 2px; }
+.demo-total span:last-child { color: var(--red); font-size: 17px; }
