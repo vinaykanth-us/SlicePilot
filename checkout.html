@@ -56,7 +56,16 @@
         <input id="custName" type="text" required minlength="2" placeholder="Your name">
 
         <label for="custAddress">Delivery Address *</label>
-        <textarea id="custAddress" rows="3" required placeholder="Street, city, ZIP"></textarea>
+        <textarea id="custAddress" rows="3" required placeholder="Street address"></textarea>
+
+        <label for="custApt">Apt / Suite (optional)</label>
+        <input id="custApt" type="text" autocomplete="off" maxlength="20" placeholder="Apt 2B">
+
+        <label for="custCity">City *</label>
+        <input id="custCity" type="text" required minlength="2" maxlength="50" placeholder="Hartford">
+
+        <label for="custZip">ZIP Code *</label>
+        <input id="custZip" type="text" inputmode="numeric" autocomplete="off" required pattern="[0-9]{5}(-[0-9]{4})?" maxlength="10" placeholder="e.g. 06105">
 
         <label for="custPhone">Phone (optional)</label>
         <input id="custPhone" type="tel" placeholder="Your phone number (optional)">
@@ -71,6 +80,9 @@
         <p>Thank you, <span id="confirmName"></span> — this is a demo order, so nothing will actually be cooked or delivered.</p>
         <p>Payment (demo): <strong id="confirmPayment"></strong></p>
         <p>Delivery (demo): <strong id="confirmDelivery"></strong></p>
+        <p>City (demo): <strong id="confirmCity"></strong></p>
+        <p>ZIP Code (demo): <strong id="confirmZip"></strong></p>
+        <p id="confirmAptLine" class="hidden">Apt / Suite: <strong id="confirmApt"></strong></p>
         <p class="hint">No payment was collected and no DoorDash / Uber delivery was booked.</p>
         <p style="margin-top: 12px;">
           <a class="btn" href="track-order.html">Track Demo Orders</a>
