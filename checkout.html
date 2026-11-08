@@ -83,12 +83,36 @@
   <div class="grid cols-2" id="demoOptionsGrid" style="margin-top: 16px;">
     <div class="card">
       <h3>Payment <span class="badge-demo" style="display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-left:6px;color:var(--muted);vertical-align:middle;">Demo only</span></h3>
-      <p class="hint">No card details are collected on this site. Never enter a real card number here.</p>
+      <p class="hint">Demo only — use the test card below. Never enter a real card number here.</p>
       <label class="choice">
         <input type="radio" name="payMethod" value="Secure payment link" checked>
         <strong>🔒 Secure payment link</strong><span class="badge-demo">Recommended</span>
         <span>In the real flow, you would get a secure Stripe link by text / email after ordering, and pay on a secure page. No card details on a call.</span>
       </label>
+      <label class="choice">
+        <input type="radio" name="payMethod" value="Card">
+        <strong>💳 Card</strong><span class="badge-demo">Demo only</span>
+        <span>Demo only — pay with the test card below. Nothing is charged.</span>
+      </label>
+      <div id="cardFields" class="hidden">
+        <p class="hint" style="margin-top: 10px;"><strong>Demo test card only:</strong> use 4242 4242 4242 4242, expiry 12/28, CVV 123. Never enter a real card. Nothing is charged, and card details are never saved or sent anywhere.</p>
+        <div class="form">
+          <label for="cardName">Name on card</label>
+          <input id="cardName" type="text" autocomplete="off" placeholder="Demo Name">
+          <label for="cardNumber">Card number</label>
+          <input id="cardNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242" maxlength="19">
+          <div style="display: flex; gap: 12px;">
+            <div style="flex: 1;">
+              <label for="cardExpiry">Expiry (MM/YY)</label>
+              <input id="cardExpiry" type="text" inputmode="numeric" autocomplete="off" placeholder="12/28" maxlength="5">
+            </div>
+            <div style="flex: 1;">
+              <label for="cardCvv">CVV</label>
+              <input id="cardCvv" type="password" inputmode="numeric" autocomplete="off" placeholder="123" maxlength="4">
+            </div>
+          </div>
+        </div>
+      </div>
       <label class="choice">
         <input type="radio" name="payMethod" value="Pay at pickup">
         <strong>🏪 Pay at pickup</strong>
