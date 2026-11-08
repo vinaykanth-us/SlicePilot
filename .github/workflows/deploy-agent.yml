@@ -1,0 +1,33 @@
+# Redeploys the Kent Pizzeria voice agent to LiveKit Cloud
+# whenever something in agent/ changes on main.
+# Needs three repo secrets: LIVEKIT_URL, LIVEKIT_API_KEY, LIVEKIT_API_SECRET.
+
+name: Deploy voice agent
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "agent/**"
+  workflow_dispatch: # lets you run it by hand from the Actions tab
+
+concurrency:
+  group: deploy-agent
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install LiveKit CLI
+        run: curl -sSL https://get.livekit.io/cli | bash
+
+      - name: Deploy agent
+        working-directory: agent
+        env:
+          LIVEKIT_URL: ${{ secrets.LIVEKIT_URL }}
+          LIVEKIT_API_KEY: ${{ secrets.LIVEKIT_API_KEY }}
+          LIVEKIT_API_SECRET: ${{ secrets.LIVEKIT_API_SECRET }}
+        run: lk agent deploy
