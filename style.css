@@ -614,12 +614,12 @@ header { box-shadow: 0 4px 24px rgba(28, 17, 12, 0.08); backdrop-filter: blur(6p
 .ai-chat { position: fixed; right: 18px; bottom: 18px; z-index: 120; }
 .ai-chat-btn { display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--red), var(--tomato)); color: #fff; border: none; border-radius: 999px; padding: 13px 20px; font-size: 15px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 26px rgba(200, 16, 46, 0.45); }
 .ai-chat-btn:hover { transform: translateY(-2px); }
-.ai-chat-panel { position: absolute; right: 0; bottom: 64px; width: 360px; max-width: calc(100vw - 36px); background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 24px 60px rgba(28, 17, 12, 0.3); overflow: hidden; display: flex; flex-direction: column; }
+.ai-chat-panel { position: absolute; right: 0; bottom: 64px; width: 320px; max-width: calc(100vw - 36px); background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 24px 60px rgba(28, 17, 12, 0.3); overflow: hidden; display: flex; flex-direction: column; }
 .ai-chat-head { background: linear-gradient(135deg, var(--red-dark), var(--red)); color: #fff; padding: 14px 16px; display: flex; align-items: center; gap: 8px; }
 .ai-chat-head strong { font-size: 16px; }
 .ai-chat-head span { font-size: 11px; font-weight: 700; background: rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 3px 8px; }
 .ai-chat-head button { margin-left: auto; background: transparent; border: none; color: #fff; font-size: 16px; cursor: pointer; }
-.ai-chat-body { padding: 14px; height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: var(--cream); }
+.ai-chat-body { padding: 14px; height: 220px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: var(--cream); }
 .ai-msg { max-width: 88%; padding: 10px 13px; border-radius: 14px; font-size: 14px; line-height: 1.5; white-space: pre-line; }
 .ai-msg.bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 4px; }
 .ai-msg.user { background: var(--red); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
