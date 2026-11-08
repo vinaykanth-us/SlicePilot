@@ -21,13 +21,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install LiveKit CLI
-        run: curl -sSL https://get.livekit.io/cli | bash
-
-      - name: Deploy agent
-        working-directory: agent
+      - name: Deploy LiveKit Cloud Agent
+        uses: livekit/deploy-action@v2
         env:
           LIVEKIT_URL: ${{ secrets.LIVEKIT_URL }}
           LIVEKIT_API_KEY: ${{ secrets.LIVEKIT_API_KEY }}
           LIVEKIT_API_SECRET: ${{ secrets.LIVEKIT_API_SECRET }}
-        run: lk agent deploy --project slicepilot-0bljqmag
+          SECRET_LIST: ${{ secrets.SECRET_LIST }}
+        with:
+          OPERATION: deploy
+          WORKING_DIRECTORY: agent
