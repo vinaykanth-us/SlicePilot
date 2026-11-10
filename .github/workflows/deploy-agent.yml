@@ -21,6 +21,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check LiveKit secrets match livekit.toml
+        env:
+          LIVEKIT_URL: ${{ secrets.LIVEKIT_URL }}
+          LIVEKIT_API_KEY: ${{ secrets.LIVEKIT_API_KEY }}
+          LIVEKIT_API_SECRET: ${{ secrets.LIVEKIT_API_SECRET }}
+        run: |
+          sub=$(grep -m1 'subdomain' agent/livekit.toml | cut -d'"' -f2)
+          host=$(printf '%s' "$LIVEKIT_URL" | sed -E 's#^(wss|https)://##; s#/.*##')
+          [ "$host" = "$sub.livekit.cloud" ] || { echo "::error::LIVEKIT_URL does not point to $sub.livekit.cloud"; exit 1; }
+          printf '%s' "$LIVEKIT_API_KEY" | grep -Eq '^API[A-Za-z0-9]+$' || { echo "::error::LIVEKIT_API_KEY has spaces, quotes or a newline, or isn't an API key"; exit 1; }
+          printf '%s' "$LIVEKIT_API_SECRET" | grep -Eq '^[A-Za-z0-9]+$' || { echo "::error::LIVEKIT_API_SECRET has spaces, quotes or a newline"; exit 1; }
+          echo "URL and key format OK for $sub"
+
       - name: Deploy LiveKit Cloud Agent
         uses: livekit/deploy-action@v2
         env:
