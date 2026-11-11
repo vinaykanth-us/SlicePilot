@@ -615,6 +615,7 @@ header { box-shadow: 0 4px 24px rgba(28, 17, 12, 0.08); backdrop-filter: blur(6p
 .ai-chat-btn { display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--red), var(--tomato)); color: #fff; border: none; border-radius: 999px; padding: 13px 20px; font-size: 15px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 26px rgba(200, 16, 46, 0.45); }
 .ai-chat-btn:hover { transform: translateY(-2px); }
 .ai-chat-panel { position: absolute; right: 0; bottom: 64px; width: 320px; max-width: calc(100vw - 36px); background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 24px 60px rgba(28, 17, 12, 0.3); overflow: hidden; display: flex; flex-direction: column; }
+.ai-chat-panel.hidden { display: none; }
 .ai-chat-head { background: linear-gradient(135deg, var(--red-dark), var(--red)); color: #fff; padding: 14px 16px; display: flex; align-items: center; gap: 8px; }
 .ai-chat-head strong { font-size: 16px; }
 .ai-chat-head span { font-size: 11px; font-weight: 700; background: rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 3px 8px; }
