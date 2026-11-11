@@ -619,7 +619,7 @@ header { box-shadow: 0 4px 24px rgba(28, 17, 12, 0.08); backdrop-filter: blur(6p
 .ai-chat-head strong { font-size: 16px; }
 .ai-chat-head span { font-size: 11px; font-weight: 700; background: rgba(255, 255, 255, 0.2); border-radius: 999px; padding: 3px 8px; }
 .ai-chat-head button { margin-left: auto; background: transparent; border: none; color: #fff; font-size: 16px; cursor: pointer; }
-.ai-chat-body { padding: 14px; height: 220px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: var(--cream); }
+.ai-chat-body { padding: 14px; height: 160px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: var(--cream); }
 .ai-msg { max-width: 88%; padding: 10px 13px; border-radius: 14px; font-size: 14px; line-height: 1.5; white-space: pre-line; }
 .ai-msg.bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 4px; }
 .ai-msg.user { background: var(--red); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
@@ -640,5 +640,5 @@ footer h3 { color: var(--gold); }
     .finder { padding: 24px 20px; }
     .finder-controls select { min-width: 0; width: 100%; }
     .finder-controls label { width: 100%; }
-    .ai-chat-panel { width: calc(100vw - 36px); }
+    .ai-chat-panel { width: 300px; max-width: calc(100vw - 36px); }
 }
