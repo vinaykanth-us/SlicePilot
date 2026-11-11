@@ -683,24 +683,3 @@ footer { border-top: 2px solid var(--gold); }
 
 /* Section headings: gold rule with a soft glow */
 h2::after { box-shadow: 0 0 12px rgba(245, 179, 1, 0.6); }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
