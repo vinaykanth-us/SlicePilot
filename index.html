@@ -12,68 +12,212 @@
 <body>
 <div class="demo-banner">🍕 DEMO PROJECT — <span>Kent Pizzeria is a fictional restaurant.</span> No real orders, payments, or deliveries.</div>
 
-<header>
+<header class="site-header">
   <nav class="nav">
-    <a class="logo" href="index.html">🍕 SlicePilot<small>Kent Pizzeria · Hartford CT</small></a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="#order-start">Order Now</a></li>
       <li><a href="menu.html">Menu</a></li>
-      <li><a href="track-order.html">Track Order</a></li>
-      <li><a href="help.html">Help &amp; Support</a></li>
-      <li><a href="call.html">Call Us</a></li>
+      <li><a href="#deals">Deals</a></li>
+      <li><a href="#rewards">Rewards</a></li>
+      <li><a href="track-order.html">Tracker</a></li>
     </ul>
-    <a class="btn" href="menu.html">Order Now<span class="cart-badge" id="cartCount">0</span></a>
+    <a class="logo" href="index.html">🍕 SlicePilot<small>Kent Pizzeria · Hartford CT</small></a>
+    <div class="header-actions">
+      <span class="location-pill">📍 Hartford, CT</span>
+      <a class="btn header-join" id="rewardsBtn" href="#rewards">Join / Sign In</a>
+      <a class="btn header-cart" href="checkout.html">🛒 Cart <span class="cart-badge" id="cartCount">0</span></a>
+    </div>
   </nav>
 </header>
 
 <main class="container">
-  <section class="hero">
-    <span class="eyebrow" style="background: rgba(245,179,1,0.18); color: #f5b301; border-color: rgba(245,179,1,0.5);">🍕 Hartford, CT • AI Pizza</span>
-    <h1>Hot pizza,<br>ordered by <span class="gold-word">AI.</span> 🍕</h1>
-    <p>Kent Pizzeria — a demo pizza restaurant in Hartford, CT. Order on the site, or call and let the AI assistant take your order. Pay by secure link, and a courier brings it to your door.</p>
-    <a class="btn" href="menu.html">Order Now →</a>
-    <a class="btn secondary" href="call.html">Call Us — AI Assistant</a>
-    <div class="hero-stats">
-      <div><strong>53</strong><span>Menu items</span></div>
-      <div><strong>AI</strong><span>Ordering</span></div>
-      <div><strong>Demo</strong><span>No real orders</span></div>
+
+  <!-- ============ ORDER HERO ============ -->
+  <section class="order-hero" id="order-start">
+    <div class="order-card">
+      <span class="eyebrow">🍕 Hartford, CT • AI Pizza</span>
+      <h1>START YOUR<br>ORDER</h1>
+      <div class="order-tabs" role="group" aria-label="Order type">
+        <button type="button" class="order-tab active" id="orderTabDelivery" aria-pressed="true">DELIVERY</button>
+        <span class="order-or">OR</span>
+        <button type="button" class="order-tab" id="orderTabCarryout" aria-pressed="false">CARRYOUT</button>
+      </div>
+      <p class="order-note" id="orderModeNote">🛵 Delivery to your door in Hartford — demo only, no real delivery.</p>
+      <div class="order-actions">
+        <a class="btn" href="menu.html">Order Now →</a>
+        <a class="btn secondary" href="call.html">📞 Call the AI Assistant</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>53</strong><span>Menu items</span></div>
+        <div><strong>AI</strong><span>Ordering</span></div>
+        <div><strong>Demo</strong><span>No real orders</span></div>
+      </div>
+      <div class="hero-badges">
+        <span>🤖 AI phone ordering</span>
+        <span>💬 Chatbot ordering</span>
+        <span>🔒 Secure payment link</span>
+        <span>🛵 Courier delivery</span>
+      </div>
     </div>
-    <div class="hero-badges">
-      <span>🤖 AI phone ordering</span>
-      <span>💬 Chatbot ordering</span>
-      <span>🔒 Secure payment link</span>
-      <span>🛵 Courier delivery</span>
+    <div class="deal-banner">
+      <img src="assets/hero-pizza.jpg" alt="Fresh pepperoni pizza with a melted cheese pull">
+      <div class="deal-banner-content">
+        <span class="deal-badge">SAVE $11.70</span>
+        <h2>KENT MIX &amp; MATCH</h2>
+        <p>Any 2 medium pizzas — <strong>$19.99 each</strong>. Meat Lovers, Veggie, House Special, your call.</p>
+        <a class="btn deal-btn" href="menu.html#pizzas">ADD DEAL</a>
+        <p class="deal-fine">Demo deal. Regular price for two medium standard pizzas is $51.68. Demo only — no real order or payment.</p>
+      </div>
     </div>
-    <img class="hero-img" src="assets/hero-pizza.jpg" alt="Fresh pepperoni pizza with a melted cheese pull">
   </section>
 
-  <div class="section-note">
-    <strong>Demo menu for this practice build.</strong> Kent Pizzeria is fictional, and the menu and prices here are sample prices for the demo — not a real restaurant's.
-  </div>
+  <!-- ============ TRACKER STRIP ============ -->
+  <section class="tracker-strip" aria-label="Track your order">
+    <div class="tracker-text">
+      <span class="eyebrow">📦 Live Demo Tracker</span>
+      <h2>TRACK YOUR ORDER</h2>
+      <p>Demo orders: <a href="track-order.html"><strong>3001</strong> — out for delivery</a> · <a href="track-order.html"><strong>3002</strong> — preparing</a> · <a href="track-order.html"><strong>3003</strong> — delivered</a></p>
+    </div>
+    <div class="tracker-form">
+      <input id="trackerInput" type="text" inputmode="numeric" placeholder="Order number, e.g. 3001" aria-label="Order number">
+      <button class="btn" id="trackerBtn" type="button">Track →</button>
+    </div>
+    <p class="hint" id="trackerNote" hidden></p>
+  </section>
 
-  <h2>Most Loved Pizzas</h2>
-  <div class="grid cols-3">
-    <div class="card">
-      <img class="card-img" src="assets/pizza-cheese.jpg" alt="Cheese Pizza">
-      <h3>Cheese Pizza</h3>
-      <p class="menu-desc">Classic cheese pizza.</p>
-      <span class="menu-price">$19.24 <small>(MED)</small></span>
+  <!-- ============ DEALS ============ -->
+  <section class="deals" id="deals">
+    <span class="eyebrow">🔥 Deals — Demo Prices</span>
+    <h2>EXPLORE MORE DEALS</h2>
+    <p class="lead">Real menu items, demo prices. Every deal is a demo — no real order or payment.</p>
+    <div class="deals-grid">
+      <article class="deal-card">
+        <img class="deal-img" src="assets/pizza-meat-lovers.jpg" alt="Meat Lovers Pizza">
+        <div class="deal-body">
+          <span class="deal-badge">SAVE $14.78</span>
+          <h3>FAMILY PIZZA NIGHT</h3>
+          <p class="deal-desc">2 medium pizzas + 12 pc wings. Feed the whole table.</p>
+          <p class="deal-price">$59.99 <span class="deal-was">was $74.77</span></p>
+          <a class="btn deal-btn" href="menu.html#pizzas">ADD DEAL</a>
+          <p class="deal-fine">Demo deal. Two medium standard pizzas ($25.84 each) + 12 pc wings ($23.09).</p>
+        </div>
+      </article>
+      <article class="deal-card">
+        <img class="deal-img" src="assets/wings-bone-in.jpg" alt="Bone-in wings">
+        <div class="deal-body">
+          <span class="deal-badge">SAVE $6.84</span>
+          <h3>WINGS &amp; BITES COMBO</h3>
+          <p class="deal-desc">12 pc wings + Tri Sampler. The perfect sidekick to any pizza.</p>
+          <p class="deal-price">$29.99 <span class="deal-was">was $36.83</span></p>
+          <a class="btn deal-btn" href="menu.html#wings">ADD DEAL</a>
+          <p class="deal-fine">Demo deal. 12 pc wings ($23.09) + Tri Sampler ($13.74).</p>
+        </div>
+      </article>
+      <article class="deal-card">
+        <img class="deal-img" src="assets/flatbread-chicken-bacon-ranch.jpg" alt="Chicken Bacon Ranch Flatbread">
+        <div class="deal-body">
+          <span class="deal-badge">SAVE $6.19</span>
+          <h3>FLATBREAD DUO</h3>
+          <p class="deal-desc">Any 2 thin-crust flatbreads. Crispy, well done, loaded.</p>
+          <p class="deal-price">$39.99 <span class="deal-was">was $46.18</span></p>
+          <a class="btn deal-btn" href="menu.html#flatbreads">ADD DEAL</a>
+          <p class="deal-fine">Demo deal. Any two flatbreads ($23.09 each).</p>
+        </div>
+      </article>
+      <article class="deal-card">
+        <img class="deal-img" src="assets/pizza-house-special.jpg" alt="House Special Pizza">
+        <div class="deal-body">
+          <span class="deal-badge">DEMO CODE: KENT10</span>
+          <h3>HARTFORD LOCAL DEALS</h3>
+          <p class="deal-desc">Demo coupons for our Hartford store — 10% off any demo order with code KENT10.</p>
+          <p class="deal-price">10% OFF <span class="deal-was">any demo order</span></p>
+          <a class="btn deal-btn" href="menu.html">SEE LOCAL DEALS</a>
+          <p class="deal-fine">Demo code only — no real discount, no real order. Use KENT10 at demo checkout for fun.</p>
+        </div>
+      </article>
     </div>
-    <div class="card">
-      <img class="card-img" src="assets/pizza-house-special.jpg" alt="House Special Pizza">
-      <h3>House Special Pizza</h3>
-      <p class="menu-desc">The house special.</p>
-      <span class="menu-price">$25.84 <small>(MED)</small></span>
-    </div>
-    <div class="card">
-      <img class="card-img" src="assets/pizza-margarita.jpg" alt="Margarita Pizza">
-      <h3>Margarita Pizza</h3>
-      <p class="menu-desc">Margarita pizza.</p>
-      <span class="menu-price">$25.84 <small>(MED)</small></span>
-    </div>
-  </div>
-  <p style="margin-top: 14px;"><a class="btn secondary" href="menu.html">See the full menu — 25 pizzas, appetizers, flatbreads &amp; wings</a></p>
+  </section>
 
+  <!-- ============ WHAT'S NEW ============ -->
+  <section class="whats-new">
+    <div class="whats-new-text">
+      <span class="eyebrow">✨ What&rsquo;s New</span>
+      <h2>ORDER WITH AI</h2>
+      <p>New: call and let the AI assistant take your order — or chat with it right here on the site. It knows the real menu and the demo orders 3001–3003.</p>
+      <p>Also new on the menu: <strong>Honeyroni Pizza</strong> — $24.74 (MED). Sweet heat, on the menu page.</p>
+      <div class="whats-new-actions">
+        <a class="btn" href="call.html">📞 Call the AI Assistant</a>
+        <button class="btn secondary" type="button" onclick="document.getElementById('aiChatBtn').click()">💬 Ask AI in Chat</button>
+      </div>
+      <p class="hint">Demo only — the AI runs in your browser and on a demo phone line. No data sent anywhere.</p>
+    </div>
+    <img class="whats-new-img" src="assets/pizza-buffalo-chicken-bleu.jpg" alt="Buffalo Chicken Chunky Bleu Cheese Pizza">
+  </section>
+
+  <!-- ============ KENT GIVES BACK (DEMO) ============ -->
+  <section class="gives-band" aria-label="Kent Gives Back demo">
+    <span class="eyebrow">❤️ Kent Gives Back — Demo</span>
+    <h2>GIVING BACK, THE KENT WAY</h2>
+    <p>This is a <strong>demo band with fictional numbers</strong> — Kent Pizzeria is fictional, so there is no real charity and no real partnership. In this demo, every demo order adds a fictional $1 to the Kent Gives Back demo fund.</p>
+    <div class="gives-progress" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" aria-label="Demo fundraising progress">
+      <div class="gives-fill" style="width: 43%;"></div>
+    </div>
+    <p class="gives-numbers"><strong>$2,150</strong> raised of a <strong>$5,000</strong> demo goal — 43% (demo, fictional)</p>
+  </section>
+
+  <!-- ============ REWARDS ============ -->
+  <section class="rewards-band" id="rewards">
+    <div class="rewards-text">
+      <span class="eyebrow">⭐ SlicePilot Rewards — Demo</span>
+      <h2>EARN A FREE PIZZA EVERY 2 ORDERS</h2>
+      <p>Join free — demo only. Get <strong>20 welcome points</strong> right away: 20 points = one free medium pizza in this demo. Your details stay in your browser and are never sent anywhere.</p>
+    </div>
+    <form class="rewards-form" id="rewardsForm">
+      <input id="rewardsName" type="text" placeholder="Your name" autocomplete="name" aria-label="Your name">
+      <input id="rewardsEmail" type="email" placeholder="Email (demo only)" autocomplete="email" aria-label="Email">
+      <button class="btn" type="submit">JOIN FREE — DEMO</button>
+    </form>
+    <p class="rewards-msg" id="rewardsMsg" role="status"></p>
+    <div class="rewards-welcome" id="rewardsWelcome" hidden>
+      <p><strong id="rewardsWelcomeText"></strong></p>
+      <button class="rewards-signout" id="rewardsSignOut" type="button">Sign out (demo)</button>
+    </div>
+  </section>
+
+  <!-- ============ BROWSE MENU ============ -->
+  <section class="browse-menu">
+    <span class="eyebrow">🍕 Browse the Menu</span>
+    <h2>BROWSE MENU</h2>
+    <p class="lead">53 items, all demo — pick a category to start.</p>
+    <div class="browse-grid">
+      <a class="browse-tile" href="menu.html#all">
+        <img src="assets/pizza-cheese.jpg" alt="Cheese Pizza">
+        <span>BUILD YOUR PIZZA</span>
+      </a>
+      <a class="browse-tile" href="menu.html#pizzas">
+        <img src="assets/pizza-house-special.jpg" alt="House Special Pizza">
+        <span>SPECIALTY PIZZAS</span>
+      </a>
+      <a class="browse-tile" href="menu.html#wings">
+        <img src="assets/wings-bone-in.jpg" alt="Bone-in wings">
+        <span>WINGS</span>
+      </a>
+      <a class="browse-tile" href="menu.html#appetizers">
+        <img src="assets/app-garlic-knots.jpg" alt="Garlic bread">
+        <span>BREADS &amp; SIDES</span>
+      </a>
+      <a class="browse-tile" href="menu.html#flatbreads">
+        <img src="assets/flatbread-classic.jpg" alt="Classic Flatbread">
+        <span>FLATBREADS</span>
+      </a>
+      <a class="browse-tile" href="menu.html#pizzas">
+        <img src="assets/pizza-honeyroni.jpg" alt="Honeyroni Pizza">
+        <span>NEW PIZZAS</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ AI PIZZA FINDER (kept) ============ -->
   <section class="finder" id="ai-finder">
     <span class="eyebrow">🤖 AI Pizza Finder — Demo</span>
     <h2>Not sure what to order? Let the AI pick.</h2>
@@ -110,6 +254,7 @@
     <p class="hint">Demo only — the finder runs in your browser from the menu on this site.</p>
   </section>
 
+  <!-- ============ HOW IT WORKS (kept) ============ -->
   <h2>How SlicePilot works</h2>
   <div class="grid cols-2 steps">
     <div class="card step"><span class="step-num">1</span><div><h3>Order</h3><p>Order on the website, on chat, or by phone — the AI assistant takes your order and confirms every item.</p></div></div>
@@ -118,6 +263,7 @@
     <div class="card step"><span class="step-num">4</span><div><h3>Delivery</h3><p>A courier picks up your pizza and delivers it to your door — track it live on the Track Order page.</p></div></div>
   </div>
 
+  <!-- ============ TRY THE DEMO (kept) ============ -->
   <h2>Try the demo</h2>
   <div class="grid cols-3">
     <div class="card">
@@ -140,9 +286,43 @@
 
 <footer>
   <div class="container">
-    <h3>🍕 SlicePilot — Kent Pizzeria</h3>
-    <p>112 Ashley Street, Hartford, CT — fictional address for this demo project.</p>
-    <p><a href="menu.html">Menu</a> · <a href="track-order.html">Track Order</a> · <a href="call.html">Call Us</a> · <a href="help.html">Help &amp; Support</a></p>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h3>🍕 SlicePilot — Kent Pizzeria</h3>
+        <p>112 Ashley Street, Hartford, CT — fictional address for this demo project.</p>
+        <p>Hot pizza, ordered by AI. Demo only.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Our Pizza</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="index.html#deals">Deals</a></li>
+          <li><a href="index.html#rewards">Rewards</a></li>
+          <li><a href="index.html#ai-finder">AI Pizza Finder</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help &amp; Support</h4>
+        <ul>
+          <li><a href="track-order.html">Track Order</a></li>
+          <li><a href="call.html">Call Us — AI Assistant</a></li>
+          <li><a href="help.html">Help &amp; Support</a></li>
+          <li><a href="menu.html">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Demo</h4>
+        <ul>
+          <li>Kent Pizzeria is fictional</li>
+          <li>No real orders or deliveries</li>
+          <li>No real payments taken</li>
+          <li>Demo prices only</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-deals">
+      <p><strong>Offer details (demo):</strong> Kent Mix &amp; Match — any 2 medium pizzas, $19.99 each (regular $51.68 for two medium standard pizzas). Family Pizza Night — 2 medium pizzas + 12 pc wings, $59.99 (regular $74.77). Wings &amp; Bites — 12 pc wings + Tri Sampler, $29.99 (regular $36.83). Flatbread Duo — any 2 flatbreads, $39.99 (regular $46.18). Local demo code KENT10 — 10% off any demo order, demo only. All deals are demo only; no real order, payment, or delivery.</p>
+    </div>
     <p class="fineprint">Demo project — Kent Pizzeria is a fictional restaurant. No real orders, payments, or deliveries. © 2026 SlicePilot.</p>
   </div>
 </footer>
@@ -165,5 +345,96 @@
 <script src="menu.js"></script>
 <script src="script.js"></script>
 <script src="ai-assistant.js"></script>
+<script>
+/* Redesign — small inline behaviours (demo only).
+   No data leaves the browser. */
+(function () {
+  /* --- Delivery / Carryout tabs --- */
+  var delBtn = document.getElementById("orderTabDelivery");
+  var carBtn = document.getElementById("orderTabCarryout");
+  var note = document.getElementById("orderModeNote");
+  function setMode(mode) {
+    var isDelivery = mode === "delivery";
+    delBtn.classList.toggle("active", isDelivery);
+    carBtn.classList.toggle("active", !isDelivery);
+    delBtn.setAttribute("aria-pressed", isDelivery ? "true" : "false");
+    carBtn.setAttribute("aria-pressed", !isDelivery ? "true" : "false");
+    note.textContent = isDelivery
+      ? "🛵 Delivery to your door in Hartford — demo only, no real delivery."
+      : "🏪 Pickup at 112 Ashley Street, Hartford, CT — demo only, no real pickup.";
+  }
+  if (delBtn && carBtn && note) {
+    delBtn.addEventListener("click", function () { setMode("delivery"); });
+    carBtn.addEventListener("click", function () { setMode("carryout"); });
+  }
+
+  /* --- SlicePilot Rewards (demo sign-in, browser only) --- */
+  var KEY = "slicepilot_rewards";
+  var form = document.getElementById("rewardsForm");
+  var nameInput = document.getElementById("rewardsName");
+  var emailInput = document.getElementById("rewardsEmail");
+  var msg = document.getElementById("rewardsMsg");
+  var welcome = document.getElementById("rewardsWelcome");
+  var welcomeText = document.getElementById("rewardsWelcomeText");
+  var signOut = document.getElementById("rewardsSignOut");
+  var headerBtn = document.getElementById("rewardsBtn");
+  function loadMember() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || null; } catch (e) { return null; }
+  }
+  function showMember(member) {
+    var first = member.name.split(" ")[0];
+    if (form) form.hidden = true;
+    if (welcome) welcome.hidden = false;
+    if (welcomeText) welcomeText.textContent = "Welcome back, " + member.name + " · " + member.pts + " pts — demo";
+    if (headerBtn) headerBtn.textContent = "👋 " + first;
+    if (msg) msg.textContent = "";
+  }
+  function showJoin() {
+    if (form) form.hidden = false;
+    if (welcome) welcome.hidden = true;
+    if (headerBtn) headerBtn.textContent = "Join / Sign In";
+    if (msg) msg.textContent = "";
+  }
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = (nameInput.value || "").trim();
+      var email = (emailInput.value || "").trim();
+      if (!name) { msg.textContent = "Tell us your name to join the demo rewards."; nameInput.focus(); return; }
+      if (!email || email.indexOf("@") < 1) { msg.textContent = "Add a valid email — demo only, it stays in your browser."; emailInput.focus(); return; }
+      var member = { name: name, email: email, pts: 20 };
+      try { localStorage.setItem(KEY, JSON.stringify(member)); } catch (e) {}
+      showMember(member);
+    });
+  }
+  if (signOut) signOut.addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    showJoin();
+  });
+  var saved = loadMember();
+  if (saved && saved.name) showMember(saved);
+
+  /* --- Tracker strip --- */
+  var trackInput = document.getElementById("trackerInput");
+  var trackBtn = document.getElementById("trackerBtn");
+  var trackNote = document.getElementById("trackerNote");
+  function goTrack() {
+    var v = (trackInput.value || "").trim();
+    if (v === "3001" || v === "3002" || v === "3003") {
+      window.location.href = "track-order.html";
+    } else {
+      trackNote.textContent = "Demo orders are 3001 (out for delivery), 3002 (preparing) and 3003 (delivered). Try one of those — or tap a link above.";
+      trackNote.hidden = false;
+      trackInput.focus();
+    }
+  }
+  if (trackBtn && trackInput && trackNote) {
+    trackBtn.addEventListener("click", goTrack);
+    trackInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); goTrack(); }
+    });
+  }
+})();
+</script>
 </body>
 </html>
